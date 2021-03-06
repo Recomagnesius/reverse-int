@@ -1,5 +1,15 @@
 module.exports = function reverse (n) {
-    nReverse = n.split('');
+    let nReverse = n;
+    if(nReverse >=0){
+    nReverse = String(nReverse);
+    nReverse = nReverse.split('').reverse().join('');  
+    nReverse = Number(nReverse);
+    }
+    else if (nReverse < 0) {
+        nReverse = -nReverse;
+    nReverse = String(nReverse);
+    nReverse = nReverse.split('').reverse().join('');  
+    nReverse = Number(nReverse);
+    }
     return nReverse;
 }
-console.log(reverse(123));
